@@ -2,16 +2,16 @@
 
 // Subjects - all subjects are animals
 const subjects = [
-    "cat", 
-    "dog", 
-    "chicken", 
-    "hare", 
-    "eagle", 
-    "bobcat", 
+    "cat",
+    "dog",
+    "chicken",
+    "hare",
+    "eagle",
+    "bobcat",
     "roadrunner",
     "coyote",
     "tortoise",
-    "rattle snake"
+    "rattlesnake",
 ];
 
 // Adjectives - used to modify the subject
@@ -25,7 +25,7 @@ const adjectives = [
     "abnormal",
     "useful",
     "evasive",
-    "persistent"
+    "persistent",
 ];
 
 // Verbs - when the subject does something
@@ -39,7 +39,7 @@ const verbs = [
     "caught",
     "destroyed",
     "scared",
-    "dragged"
+    "dragged",
 ];
 
 // Adverbs - modifies the verb
@@ -53,7 +53,7 @@ const adverbs = [
     "ignorantly",
     "quietly",
     "carefully",
-    "quickly"
+    "quickly",
 ];
 
 // Direct Objects - what the subject does something to
@@ -67,14 +67,14 @@ const directObjects = [
     "twig",
     "branch",
     "shoe",
-    "package"
+    "package",
 ];
 
 // Articles - another type of adjective
 const articles = ["a", "the"];
 
 const getRandomWord = (arr) => {
-    return arr[Math.floor(Math.random() * arr.length)]
+    return arr[Math.floor(Math.random() * arr.length)];
 };
 
 // Return all of the words to be used in a sentence as an object
@@ -86,13 +86,13 @@ const getWords = () => {
         adverb: getRandomWord(adverbs),
         directObject: getRandomWord(directObjects),
         article1: getRandomWord(articles),
-        article2: getRandomWord(articles)
+        article2: getRandomWord(articles),
     };
 };
 
 const capitalize = (str) => {
     return str[0].toUpperCase() + str.slice(1);
-}
+};
 
 const formatRandomSentence = () => {
     const words = getWords();
@@ -105,11 +105,13 @@ const formatRandomSentence = () => {
         words.article2 = "an";
     }
 
-    return capitalize(`${words.article1} ${words.adjective} ${words.subject} ${words.adverb} ${words.verb} ${words.article2} ${words.directObject}.`);
-}
+    return capitalize(
+        `${words.article1} ${words.adjective} ${words.subject} ${words.adverb} ${words.verb} ${words.article2} ${words.directObject}.`
+    );
+};
 
 const setRandomSentence = () => {
     const randomSentence = formatRandomSentence();
     document.getElementById("sentence").innerHTML = randomSentence;
     console.log(randomSentence);
-}
+};
