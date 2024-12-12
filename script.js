@@ -12,6 +12,7 @@ const subjects = [
     "coyote",
     "tortoise",
     "rattlesnake",
+    "Stream",
 ];
 
 // Adjectives - used to modify the subject
