@@ -27,6 +27,7 @@ const adjectives = [
     "useful",
     "evasive",
     "persistent",
+    "strange",
 ];
 
 // Verbs - when the subject does something
